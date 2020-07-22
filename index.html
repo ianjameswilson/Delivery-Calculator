@@ -8,9 +8,9 @@
 </head>
 <body>
 
-    <section class="hero is-primary" >
-        <div class="hero-body" >
-          <div class="container" >
+    <section class="hero is-primary">
+        <div class="hero-body">
+          <div class="container">
             <h1 class="title" style="text-align: center;">
               Delivery Calculator
             </h1>
@@ -22,89 +22,114 @@
       </section>
 
       <section>
-          <div class="container" style="padding-top: 10px;">
-              <div class="columns">
-                  <div class="column" style="padding:10px">
-                    <div class="field">
-                        <div class="control">
-                            <h2>Flat fee</h2>
-                          <input class="input is-primary" type="text" placeholder="Primary input">
-                        </div>
-                      </div>
-                  </div>
-                  <div class="column" style="padding:10px">
-                    <div class="field">
-                        <div class="control">
-                            <h2>%</h2>
-                          <input class="input is-primary" type="text" placeholder="Primary input">
-                        </div>
-                      </div>
-                  </div>
-              </div>
-
-              <div class="columns">
-                <div class="column" style="padding:10px">
-                  <div class="field">
-                      <div class="control">
-                          <h2>Per mile</h2>
-                        <input class="input is-primary" type="text" placeholder="Primary input">
-                      </div>
-                    </div>
-                </div>
-                <div class="column" style="padding:10px">
-                  
-                </div>
+        <div class="box">
+        <div class="field">
+            <label class="label">Name:</label>
+            <div class="control">
+              <input class="input" id="nameInput" type="text" placeholder="Your name goes here">
             </div>
           </div>
 
-          <div class="column" style="padding:10px;margin-left:40px">
-            <div class="field">
-                <div class="control">
-                    <h2>Per mile</h2>
-                  <input class="input is-primary" type="text" placeholder="Primary input">
-                </div>
+          <div class="field">
+            <label class="label">Order Total:</label>
+            <div class="control">
+              <input class="input" id="orderTotal" type="text" placeholder="Total cost for order goes here">
+            </div>
+          </div>
+          
+          <div class="field">
+            <label class="label">Choose the option(s) that apply to you and fill in the information:</label>
+              <div class="columns">
+                  <div class="column">
+                    <label class="checkbox">
+                        <input type="checkbox">
+                        <input class="input" id="flatFee" type="text" placeholder="Flat delivery fee">
+                    </label>
+                  </div>
+                  <div class="column">
+                    <label class="checkbox">
+                        <input type="checkbox">
+                        <input class="input" id="perMileFee" type="text" placeholder="$ per mile fee">
+                    </label>
+                  </div>
+                  <div class="column">
+                    <label class="checkbox">
+                        <input type="checkbox">
+                        <input class="input" id="percentFee" type="text" placeholder="% of order total fee">
+                    </label>
+                  </div>
               </div>
           </div>
-
-          <div class="column" style="padding:10px;margin-left:40px">
-            <div class="field">
+        </div>
+          <div class="field">
+            <div class="box">
+                <label class="label">Pickup Address:</label>
                 <div class="control">
-                    <h2>Per mile</h2>
-                  <input class="input is-primary" type="text" placeholder="Primary input">
+                    <input class="input" id="pickupAddress" type="text" placeholder="Pickup Address">
                 </div>
-              </div>
+                
+                <div class="columns">
+                    <div class="column">
+                        <div class="control">
+                            <input class="input" id="pickupCity" type="text" placeholder="City">
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="control">
+                            <input class="input" id="pickupState" type="text" placeholder="State (i.e. KS)">
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="control">
+                            <input class="input" id="pickupZipCode" type="text" placeholder="Zipcode (5 digit)">
+                        </div>
+                    </div>
+                </div>
+
+                <label class="label">Additional tips:</label>
+                    <div class="control">
+                        <textarea class="textarea" id="pickupTips" placeholder="Any additional information needed"></textarea>
+                    </div>
+                
+            </div>
           </div>
 
-          <div class="column" style="padding:10px;margin-left:40px">
-            <div class="field">
+          <div class="field">
+            <div class="box">
+                <label class="label">Delivery Address:</label>
                 <div class="control">
-                    <h2>Per mile</h2>
-                  <input class="input is-primary" type="text" placeholder="Primary input">
+                    <input class="input" id="deliveryAddress" type="text" placeholder="Delivery Address">
                 </div>
-              </div>
-          </div>
-
-          <div class="column" style="padding:10px;margin-left:40px">
-            <div class="field">
-                <div class="control">
-                    <h2>Per mile</h2>
-                  <input class="input is-primary" type="text" placeholder="Primary input">
+                <div class="columns">
+                    <div class="column">
+                        <div class="control">
+                            <input class="input" id="deliveryCity" type="text" placeholder="City">
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="control">
+                            <input class="input" id="deliveryState"  type="text" placeholder="State (i.e. KS)">
+                        </div>
+                    </div>
+                    <div class="column">
+                        <div class="control">
+                            <input class="input" id="deliveryZipCode" type="text" placeholder="Zipcode (5 digit)">
+                        </div>
+                    </div>
                 </div>
-              </div>
+                <label class="label">Additional tips:</label>
+                    <div class="control">
+                        <textarea class="textarea" id="deliveryTips" placeholder="Any additional information needed"></textarea>
+                    </div>
+            </div>
           </div>
-
-          <div class="column" style="padding:10px;margin-left:40px">
-            <div class="field">
-                <div class="control">
-                    <h2>Per mile</h2>
-                  <input class="input is-primary" type="text" placeholder="Primary input">
-                </div>
-              </div>
+          
+          <div class="field">
+            <div class="control">
+                <button class="button is-fullwidth is-primary" id="calculateBtn">Calculate</button>
+            </div>
           </div>
-
-          <div class="column">
-            <button class="button is-fullwidth is-primary">Caculate</button>
-          </div>
+              
       </section>
 
 
