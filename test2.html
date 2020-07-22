@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.js"></script>
+    <link href="https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.css" rel="stylesheet" />
+
+
+
+
+
+    <title>Document</title>
+</head>
+<body>
+    
+
+
+
+
+
+
+<div id="map"></div>
+<div id="geocoder"></div>
+
+
+
+<script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.min.js"></script>
+<link
+rel="stylesheet"
+href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.css"
+type="text/css"
+/>
+
+
+
+    <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
+
+
+<script>
+    mapboxgl.accessToken = 'pk.eyJ1IjoiZXJpa21hcjMiLCJhIjoiY2tjczBkdGwwMWsyczJ5bW9sOGM5ODhyNyJ9.pD90miDj9O02qnmcyUzO5Q';
+    var start = "-94.7742934,39.3658373"
+    var end = "-94.4403529,39.2264761"
+
+    var queryURL = "https://api.mapbox.com/directions/v5/mapbox/driving/" + start + ";" + end +  "?geometries=geojson&access_token=pk.eyJ1IjoiZXJpa21hcjMiLCJhIjoiY2tjczBkdGwwMWsyczJ5bW9sOGM5ODhyNyJ9.pD90miDj9O02qnmcyUzO5Q"
+    
+    var geocoder = new MapboxGeocoder({
+    accessToken: mapboxgl.accessToken,
+    types: 'place,postcode,locality,neighborhood,address,poi'
+    });
+ 
+geocoder.addTo('#geocoder');
+
+geocoder.on('result', function(e) {
+    // map.getSource('single-point').setData(e.result.geometry);
+    console.log(e)
+  });
+
+console.log(geocoder)
+    
+        $.ajax({
+            url: queryURL,
+            method: "GET"
+            }).then(function(response) {
+
+                console.log(response)
+                console.log(response.waypoints[0].distance+response.waypoints[1].distance)
+
+            })
+
+</script>
+
+
+</body>
+</html>
