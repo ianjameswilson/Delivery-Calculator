@@ -18,7 +18,7 @@
 <body>
     
 
-
+<!-- Divs for the start and end address -->
 
 
 <div class="container">
@@ -36,7 +36,7 @@
 
     </div>
 </div>
-
+<!-- Not used yet -->
 <div id="map"></div>
 
 
@@ -56,30 +56,36 @@ type="text/css"
 
 
 <script>
+
+    // Keys and vars declaration
     mapboxgl.accessToken = 'pk.eyJ1IjoiZXJpa21hcjMiLCJhIjoiY2tjemo5bXF0MDQ5dDJ4bXRzNGI1dXNpZSJ9.ViWQU5_qEYs8pXNG5fQZKg';
     var start 
     var end 
 
-    
-    var geocoderStart = new MapboxGeocoder({
+
+    // Start input / geo coder
+var geocoderStart = new MapboxGeocoder({
     accessToken: mapboxgl.accessToken,
     placeholder: "Store Address",
 
     types: 'place,postcode,locality,neighborhood,address,poi'
     });
  
+//  Add to divs
 geocoderStart.addTo('#start');
 
+// End input
 var geocoderEnd = new MapboxGeocoder({
     accessToken: mapboxgl.accessToken,
     placeholder: "Delivery Address",
     types: 'place,postcode,locality,neighborhood,address,poi'
     });
- 
+ //  Add to divs
+
 geocoderEnd.addTo('#end');
 
 
-
+// Event listener for start address
 geocoderStart.on('result', function(e) {
     // map.getSource('single-point').setData(e.result.geometry);
     console.log(e.result.geometry.coordinates)
@@ -93,6 +99,9 @@ geocoderStart.on('result', function(e) {
 
   });
 
+//// Event listener for end address
+
+
   geocoderEnd.on('result', function(e) {
     // map.getSource('single-point').setData(e.result.geometry);
     var lon = e.result.geometry.coordinates[0]
@@ -101,6 +110,8 @@ geocoderStart.on('result', function(e) {
     end =  lon +"," +  lat
 
     console.log( end)
+
+    // Console logs the results
     calculateDistance()
 
     return end
@@ -109,6 +120,7 @@ geocoderStart.on('result', function(e) {
 
 //   calculateDistance()
 
+// Api call that gets the distances
 function calculateDistance(){
 
     console.log()
