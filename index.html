@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <link rel="stylesheet" type="text/css" href="semantic/dist/semantic.min.css">
+    <link rel="stylesheet" href="project-1.css">
+
+    <title>Delivery Calculator</title>
+</head>
+
+<body>   
+        <div class="item" id="header">                  
+            <h1 class="ui large header">Delivery Calculator</h1>
+        </div>   
+        <hr>
+        <div class="ui two column grid">
+            <div class="row">
+                <img class="ui fluid image" id="image" style="float: right;" width="650" height="385" src="https://www.askdavetaylor.com/wp-content/uploads/2017/08/apple-maps-send-iphone-fp.png"> 
+                <div class="column"> 
+                    <div class="ui form">
+                        <div class="inline field">
+                           <label>Customer Name</label>
+                           <input id="customer-name" style="width: 200px; display: flex; justify-content: center; align-items: center;" type="text" placeholder="Full Name">
+                           <br>
+                           <label>Order Amount</label>
+                           <input id="order-amount" style="display: flex; justify-content: center; align-items: center;" type="text" placeholder="$ ">
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="ui form">
+                        <div class="inline field">
+                            <div class="ui checkbox">
+                                <input type="checkbox" id="check-box">
+                                <label>Flat Delivery Fee</label>
+                                <input id="flat-fee" type="text" placeholder="$ ">
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="ui form">
+                        <div class="inline field">
+                            <div class="ui checkbox">
+                                <input type="checkbox" id="check-box">
+                                <label>Rate Per Mile</label>
+                                <input id="rate-per-mile" type="text" placeholder="$ ">
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="ui form">
+                        <div class="inline field">
+                            <div class="ui checkbox">
+                               <input type="checkbox" id="check-box">
+                               <label>% Commission</label>
+                               <input id="commission-rate" type="text" placeholder="$ ">
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <br>
+                    <div class="ui form">
+                        <div class="inline field">
+                            <div class="ui large icon input">
+                                <label>Address of Origin</label>
+                                <input id="origin-address" style="width: 500px;" type="text" placeholder="Street Address, City, State, Zipcode">
+                            </div>
+                        </div>
+                        <br>
+                        <div class="inline field">
+                            <div class="ui large icon input">        
+                                <label>Customer Address</label>
+                                <input id="customer-address" style="width: 500px; display: fluid;" type="text" placeholder="Street Address, City, State, Zipcode">
+                            </div>
+                        </div>
+                    </div>
+                    <br>
+                    <div class="ui form">
+                        <div class="inline field">
+                            <button id="calculate" class="ui button">Calculate</button>
+                            <button id="reset" class="ui button">Reset</button>
+                        </div>   
+                    </div>
+                </div>
+            </div>
+            <br>
+            <hr>
+            <br>
+            <div class="ui form">
+                <div class="inline field">
+                  <label>Distance</label>
+                  <input id="distance-calculated" type="text">
+                </div>
+            </div>
+            <br>
+            <div class="ui form">
+                <div class="inline field">
+                  <label>Calculated Delivery Fee</label>
+                  <input id="delivery-fee" type="text" placeholder="$ ">
+                </div>
+            </div>
+            <br>
+            <div class="ui form">
+                <div class="inline field">
+                  <label>Calculated Mileage Fee</label>
+                  <input id="mileage-fee" type="text" placeholder="$ ">
+                </div>
+            </div>
+            <br>
+            <div class="ui form">
+                <div class="inline field">
+                  <label>Calculated Commission</label>
+                  <input id="commission-fee" type="text" placeholder="$ ">
+                </div>
+            </div>
+            <br>
+            <div class="ui form">
+                <div class="inline field">
+                  <label>Grand Total</label>
+                  <input id="grand-total" type="text" placeholder="$ ">
+                </div>
+            </div>
+            <br>
+            <hr>
+            <br>
+            
+            <!-- STATISTICS -->
+            <div class="ui statistic">
+                <div class="value" id="stat">
+                    5,000
+                </div>
+                <div class="label" id="stat-name">
+                  Deliveries Calculated
+                </div>
+            </div>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css"></script>
+</body>
+</html>
+
