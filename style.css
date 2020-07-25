@@ -1,0 +1,18 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(rgb(47, 150, 163), rgb(48, 62, 143));
+    color: white;
+}
+
+#header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#stat, #stat-name {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
