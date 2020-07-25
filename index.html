@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <link rel="stylesheet" type="text/css" href="https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.css">
+    <link rel="stylesheet" type="text/css" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.css">
     <link rel="stylesheet" href="./style.css">
 
     <title>Delivery Calculator</title>
@@ -65,14 +67,16 @@
                         <div class="inline field">
                             <div class="ui large icon input">
                                 <label>Address of Origin</label>
-                                <input id="origin-address" style="width: 500px;" type="text" placeholder="Street Address, City, State, Zipcode">
+                                <!-- <input id="origin-address" style="width: 500px;" type="text" placeholder="Street Address, City, State, Zipcode"> -->
+                                <div id="origin-address"></div>
                             </div>
                         </div>
                         <br>
                         <div class="inline field">
                             <div class="ui large icon input">        
                                 <label>Customer Address</label>
-                                <input id="customer-address" style="width: 500px; display: fluid;" type="text" placeholder="Street Address, City, State, Zipcode">
+                                <!-- <input id="customer-address" style="width: 500px; display: fluid;" type="text" placeholder="Street Address, City, State, Zipcode"> -->
+                                <div id="customer-address"></div>
                             </div>
                         </div>
                     </div>
@@ -135,8 +139,13 @@
                   Deliveries Calculated
                 </div>
             </div>
-    
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.10/semantic.min.css"></script>
+            
+    <script src="https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.js"></script>
+    <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.auto.min.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="./script.js"></script>
 </body>
 </html>
 
