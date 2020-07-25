@@ -132,11 +132,12 @@ function calculateDistance(){
         method: "GET"
         }).then(function(response) {
 
-            var miles = Math.ceil(response.routes[0].distance * 0.00062137)
-            var minutes =Math.floor( (response.routes[0].duration/60))
+            var miles = parseFloat((response.routes[0].distance * 0.000621371).toFixed(1));
+
+            // var minutes =Math.floor( (response.routes[0].duration/60))
 
             console.log(response)
-            console.log(miles, minutes )
+            console.log(miles)
 
         })
 
