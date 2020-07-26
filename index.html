@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css">
+    <!-- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"> -->
     <link rel="stylesheet" type="text/css" href="https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.css">
     <link rel="stylesheet" type="text/css" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.css">
     <link rel="stylesheet" href="./style.css">
@@ -35,7 +35,7 @@
                     <div class="ui form">
                         <div class="inline field">
                             <div class="ui checkbox">
-                                <input type="checkbox" id="flat-fee">
+                                <input type="checkbox" id="flat-fee-on">
                                 <label>Flat Delivery Fee</label>
                                 <input id="flat-fee" type="text" placeholder="$ ">
                             </div>
@@ -45,7 +45,7 @@
                     <div class="ui form">
                         <div class="inline field">
                             <div class="ui checkbox">
-                                <input type="checkbox" id="per-mile">
+                                <input type="checkbox" id="per-mile-on">
                                 <label>Rate Per Mile</label>
                                 <input id="rate-per-mile" type="text" placeholder="$ ">
                             </div>
@@ -55,7 +55,7 @@
                     <div class="ui form">
                         <div class="inline field">
                             <div class="ui checkbox">
-                               <input type="checkbox" id="commission">
+                               <input type="checkbox" id="commission-on">
                                <label>% Commission</label>
                                <input id="commission-rate" type="text" placeholder="$ ">
                             </div>
@@ -95,35 +95,35 @@
             <div class="ui form">
                 <div class="inline field">
                   <label>Distance</label>
-                  <input id="distance-calculated" type="text">
+                  <textarea id="distance-calculated" rows="1" cols="25"></textarea>
                 </div>
             </div>
             <br>
             <div class="ui form">
                 <div class="inline field">
                   <label>Calculated Delivery Fee</label>
-                  <input id="delivery-fee" type="text" placeholder="$ ">
+                  <textarea id="delivery-fee" rows="1" cols="25"></textarea>
                 </div>
             </div>
             <br>
             <div class="ui form">
                 <div class="inline field">
                   <label>Calculated Mileage Fee</label>
-                  <input id="mileage-fee" type="text" placeholder="$ ">
+                  <textarea id="mileage-fee" rows="1" cols="25"></textarea>
                 </div>
             </div>
             <br>
             <div class="ui form">
                 <div class="inline field">
                   <label>Calculated Commission</label>
-                  <input id="commission-fee" type="text" placeholder="$ ">
+                  <textarea id="commission-fee" rows="1" cols="25"></textarea>
                 </div>
             </div>
             <br>
             <div class="ui form">
                 <div class="inline field">
                   <label>Grand Total</label>
-                  <input id="grand-total" type="text" placeholder="$ ">
+                  <textarea id="grand-total" rows="1" cols="25"></textarea>
                 </div>
             </div>
             <br>
