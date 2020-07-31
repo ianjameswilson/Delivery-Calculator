@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
-    <!-- <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"> -->
+    <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.4.1/semantic.min.css"> 
     <link rel="stylesheet" type="text/css" href="https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.css">
     <link rel="stylesheet" type="text/css" href="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.css">
     <link rel="stylesheet" href="./style.css">
@@ -12,134 +12,150 @@
     <title>Delivery Calculator</title>
 </head>
 
-<body>   
-        <div class="item" id="header">                  
-            <h1 class="ui large header">Delivery Calculator</h1>
-        </div>   
-        <hr>
-        <div class="ui two column grid">
-            <div class="row">
-                <img class="ui fluid image" id="image" style="float: right;" width="650" height="385" src="https://www.askdavetaylor.com/wp-content/uploads/2017/08/apple-maps-send-iphone-fp.png"> 
-                <div class="column"> 
-                    <div class="ui form">
-                        <div class="inline field">
-                           <label>Customer Name</label>
-                           <input id="customer-name" style="width: 200px; display: flex; justify-content: center; align-items: center;" type="text" placeholder="Full Name">
-                           <br>
-                           <label>Order Amount</label>
-                           <input id="order-amount" style="display: flex; justify-content: center; align-items: center;" type="text" placeholder="$ ">
-                        </div>
-                    </div>
-                    <br>
-                    <br>
-                    <div class="ui form">
-                        <div class="inline field">
-                            <div class="ui checkbox">
-                                <input type="checkbox" id="flat-fee-on">
-                                <label>Flat Delivery Fee</label>
-                                <input id="flat-fee" type="text" placeholder="$ ">
-                            </div>
-                        </div>
-                    </div>
-                    <br>
-                    <div class="ui form">
-                        <div class="inline field">
-                            <div class="ui checkbox">
-                                <input type="checkbox" id="per-mile-on">
-                                <label>Rate Per Mile</label>
-                                <input id="rate-per-mile" type="text" placeholder="$ ">
-                            </div>
-                        </div>
-                    </div>
-                    <br>
-                    <div class="ui form">
-                        <div class="inline field">
-                            <div class="ui checkbox">
-                               <input type="checkbox" id="commission-on">
-                               <label>% Commission</label>
-                               <input id="commission-rate" type="text" placeholder="$ ">
-                            </div>
-                        </div>
-                    </div>
-                    <br>
-                    <br>
-                    <div class="ui form">
-                        <div class="inline field">
-                            <div class="ui large icon input">
-                                <label>Address of Origin</label>
-                                <!-- <input id="origin-address" style="width: 500px;" type="text" placeholder="Street Address, City, State, Zipcode"> -->
-                                <div id="origin-address"></div>
-                            </div>
-                        </div>
-                        <br>
-                        <div class="inline field">
-                            <div class="ui large icon input">        
-                                <label>Customer Address</label>
-                                <!-- <input id="customer-address" style="width: 500px; display: fluid;" type="text" placeholder="Street Address, City, State, Zipcode"> -->
-                                <div id="customer-address"></div>
-                            </div>
-                        </div>
-                    </div>
-                    <br>
-                    <div class="ui form">
-                        <div class="inline field">
-                            <button id="calculate" class="ui button">Calculate</button>
-                            <button id="reset" class="ui button">Reset</button>
-                        </div>   
-                    </div>
-                </div>
+<body>
+    <div class="item" id="header">                  
+        <h1 class="ui huge header">Delivery Calculator</h1>
+    </div>   
+    <hr>
+    <div class="ui four column grid">
+        <div class="row">
+          <div class="column"></div>
+          <div class="column"><label for="customer-name" style="float: right;margin-top: 8px;"><h3 style="padding-right: 20px;">Customer Name</h3></label></div>
+          <div class="column">
+              <div class="ui form">
+                <input id="customer-name" style="display: flex; justify-content: center; align-items: center;width:" type="text" placeholder="Full Name">
+              </div>
             </div>
-            <br>
-            <hr>
-            <br>
+          <div class="column"></div>
+        </div>
+        <div class="row">
+            <div class="column"></div>
+            <div class="column"><label for="order-amount" style="float: right;margin-top: 8px;"><h3 style="padding-right: 20px;">Order Amount</h3></label></div>
+            <div class="column">
             <div class="ui form">
-                <div class="inline field">
-                  <label>Distance</label>
-                  <textarea id="distance-calculated" rows="1" cols="25"></textarea>
+                <input id="order-amount" style="display: flex; justify-content: center; align-items: center;" type="text" placeholder="$ ">
+              </div>
+            </div>
+            <div class="column"></div>
+        </div>
+        <div class="row">
+            <div class="column"></div>
+            <div class="column">
+                <div class="ui checkbox" style="float:right;margin-top: 8px;">
+                    <input type="checkbox" id="flat-fee-on">
+                    <label for="flat-fee"><h3 style="padding-right: 20px;">Flat Delivery Fee</h3></label>
+                </div>
+            </div>
+            <div class="column">
+                <div class="ui form">
+                    <input id="flat-fee" type="text" placeholder="$ ">
+                </div>
+            </div>
+            <div class="column"></div>
+        </div>
+        <div class="row">
+            <div class="column"></div>
+            <div class="column">
+                <div class="ui checkbox" style="float:right;margin-top: 8px;">
+                    <input type="checkbox" id="per-mile-on">
+                    <label><h3 style="padding-right: 20px;">Rate Per Mile</h3></label>
+                </div>
+            </div>
+            <div class="column">
+                <div class="ui form">
+                    <input id="rate-per-mile" type="text" placeholder="$/m ">
+                </div>
+            </div>
+            <div class="column"></div>
+        </div>
+        <div class="row">
+            <div class="column"></div>
+            <div class="column">
+                <div class="ui checkbox" style="float:right;margin-top: 8px;">
+                    <input type="checkbox" id="commission-on">
+                    <label><h3 style="padding-right: 20px;">% Commission</h3></label>
+                </div>
+            </div>
+            <div class="column">
+                <div class="ui form">
+                    <input id="commission-rate" type="text" placeholder="% ">
+                </div>
+            </div>
+            <div class="column"></div>
+        </div>
+      </div>
+      <br>
+      <div class="container" style="text-align: center;">
+        <!-- <div class="ui form" style="display: inline-block;"> -->
+            <div class="inline field">
+                <div class="ui large icon input">
+                    <label style="float:right; padding-left: 153px;margin-top: 8px;"><h3>Pickup Address</h3></label>
+                    <!-- <input id="origin-address" style="width: 500px;" type="text" placeholder="Street Address, City, State, Zipcode"> -->
+                    <div id="origin-address" style="padding-left: 50px; z-index: 2;padding-right: 54px;"></div>
                 </div>
             </div>
             <br>
-            <div class="ui form">
-                <div class="inline field">
-                  <label>Calculated Delivery Fee</label>
-                  <textarea id="delivery-fee" rows="1" cols="25"></textarea>
+            <div class="inline field">
+                <div class="ui large icon input">        
+                    <label style="float:right; padding-left: 138px;margin-top: 8px;"><h3>Delivery Address</h3></label>
+                    <!-- <input id="customer-address" style="width: 500px; display: fluid;" type="text" placeholder="Street Address, City, State, Zipcode"> -->
+                    <div id="customer-address" style="padding-left: 50px;padding-right: 54px;" ></div>
                 </div>
             </div>
-            <br>
-            <div class="ui form">
-                <div class="inline field">
-                  <label>Calculated Mileage Fee</label>
-                  <textarea id="mileage-fee" rows="1" cols="25"></textarea>
-                </div>
+        <!-- </div> -->
+        <br>
+        <br>
+        <div class="ui form">
+            <div class="inline field">
+                <button id="calculate" class="ui button">Calculate</button>
+                <button id="reset" class="ui button">Reset</button>
+            </div>   
+        </div>
+        <br><br><br>
+        <div class="ui vertical steps">
+            <div class="step">
+              <i class="map outline icon"></i>
+              <div class="content">
+                <div class="title">Distance</div>
+                <div class="description" style="float: left;" id="distance-calculated"></div>
+              </div>
             </div>
-            <br>
-            <div class="ui form">
-                <div class="inline field">
-                  <label>Calculated Commission</label>
-                  <textarea id="commission-fee" rows="1" cols="25"></textarea>
-                </div>
+            <div class="step">
+              <i class="money icon"></i>
+              <div class="content">
+                <div class="title">Calculated Delivery Fee</div>
+                <div class="description" style="float: left;" id="delivery-fee"></div>
+              </div>
             </div>
-            <br>
-            <div class="ui form">
-                <div class="inline field">
-                  <label>Grand Total</label>
-                  <textarea id="grand-total" rows="1" cols="25"></textarea>
+            <div class="step">
+                <i class="taxi icon"></i>
+                <div class="content">
+                  <div class="title">Calculated Mileage Fee</div>
+                  <div class="description" style="float: left;" id="mileage-fee"></div>
                 </div>
+              </div>
+              <div class="step">
+                <i class="percent icon"></i>
+                <div class="content" >
+                  <div class="title">Calculated Commission</div>
+                  <div class="description" style="float: left;" id="commission-fee"></div>
+                </div>
+              </div>
+            <div class="active step">
+              <i class="dollar sign icon"></i>
+              <div class="content" >
+                <div class="title">Grand Total</div>
+                <div class="description" style="float: left;" id="grand-total"></div>
+              </div>
             </div>
-            <br>
-            <hr>
-            <br>
-            
-            <!-- STATISTICS -->
-            <div class="ui statistic">
-                <div class="value" id="stat">
-                    5,000
-                </div>
-                <div class="label" id="stat-name">
-                  Deliveries Calculated
-                </div>
-            </div>
-            
+          </div>
+      </div>
+      
+    </div>
+
+
+
+
     <script src="https://api.mapbox.com/mapbox-gl-js/v1.11.1/mapbox-gl.js"></script>
     <script src="https://api.mapbox.com/mapbox-gl-js/plugins/mapbox-gl-geocoder/v4.5.1/mapbox-gl-geocoder.min.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/es6-promise@4/dist/es6-promise.min.js"></script>
@@ -148,4 +164,3 @@
     <script src="./script.js"></script>
 </body>
 </html>
-
