@@ -56,8 +56,6 @@ $("#reset").on({
     $("#customer-name").val("");
     document.getElementById("order-amount").value = "";
     document.getElementById("flat-fee-on").checked = false;
-    console.log($("#flat-fee-on").prop("checked"));
-    console.log(document.getElementById("flat-fee-on").checked);
     document.getElementById("flat-fee").value = "";
     document.getElementById("per-mile-on").checked = false;
     document.getElementById("rate-per-mile").value = "";
