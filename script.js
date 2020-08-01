@@ -18,6 +18,7 @@ $("#calculate").on({
     document.getElementById("order-amount").style.backgroundColor = "rgb(255, 255, 255)";
     document.getElementById("flat-fee").style.backgroundColor = "rgb(255, 255, 255)";
     document.getElementById("rate-per-mile").style.backgroundColor = "rgb(255, 255, 255";
+    document.getElementById("commission-rate").style.backgroundColor = "rgb(255, 255, 255)"
     orderAmount = getAmount($("#order-amount").val().trim());
     if (orderAmount > 0) {
       if (document.getElementById("flat-fee-on").checked) {
