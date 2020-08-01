@@ -34,13 +34,17 @@ $("#calculate").on({
         if (mileageFee > 0) {
           document.getElementById("mileage-fee").textContent = "$" + mileageFee.toFixed(2);
         } else {
-          document.getElementById("rate-per-mile").style.backgroundColor = "rgb(255, 143, 159";
+          document.getElementById("rate-per-mile").style.backgroundColor = "rgb(255, 143, 159)";
           mileageFee = 0;
         };
       };
       if (document.getElementById("commission-on").checked) {
         commissionFee = ($("#commission-rate").val() / 100) * orderAmount;
-        document.getElementById("commission-fee").textContent = "$" + commissionFee.toFixed(2);
+        if (commissionFee > 0) {
+          document.getElementById("commission-fee").textContent = "$" + commissionFee.toFixed(2);
+        } else {
+          document.getElementById("commission-rate").style.backgroundColor = "rgb(255, 143, 159)"
+        }
       };
       grandTotal = orderAmount + flatFee + mileageFee + commissionFee;
       document.getElementById("grand-total").textContent = "$" + grandTotal.toFixed(2);
