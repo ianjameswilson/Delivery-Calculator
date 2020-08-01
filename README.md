@@ -4,8 +4,7 @@ https://ianjameswilson.github.io/Delivery-Calculator/
 
 This is a delivery calculator that will find a total delivery fee given any number of options.
 
-![Delivery Calculator screen shot #1]
-(./SSDeliveryCalculator1.png)
+![Delivery Calculator screen shot #1](./SSDeliveryCalculator1.png)
 
 Start by adding a customer name. This field is not required.
 
@@ -24,8 +23,7 @@ corresponding input boxes. You may start by typing the address and selecting the
 from the dropdown menu when it appears. You may also type in a point of interest. Finish your
 input by selecting the correct address when it appears in the dropdown menu.
 
-![Delivery Calculator screen shot #2]
-(./SSDeliveryCalculator2.png)
+![Delivery Calculator screen shot #2](./SSDeliveryCalculator2.png)
 
 When you have selected and provided all the necessary inputs, press the `Calculate` button.
 
@@ -33,5 +31,4 @@ In the box at the bottom of the screen, the total mileage is displayed. Each opt
 will be calculated and displayed in the appropriate box. At the very bottom is a grand total of 
 the Order Amount, plus all additional delivery fees.
 
-![Delivery Calculator screen shot #3]
-(./SSDeliveryCalculator3.png)
+![Delivery Calculator screen shot #3](./SSDeliveryCalculator3.png)
